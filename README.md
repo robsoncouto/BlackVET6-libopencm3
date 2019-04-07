@@ -10,3 +10,11 @@ Template forked from the [libopencm3 one](https://github.com/libopencm3/libopenc
 
 # Directories
 * `blink`: contains the application, can be renamed (but don't forget to update the makefile)
+
+# Board
+
+The board I use is the following one. I bought on ebay for around 10 USD.
+
+![VET6 Board](F4VET6board.jpg)
+
+You can find a lot of info on it on the [STM32duino wiki](https://wiki.stm32duino.com/index.php?title=STM32F407)
