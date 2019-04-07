@@ -27,14 +27,14 @@
 
 static void gpio_setup(void)
 {
-	/* Enable GPIOC clock. */
+	/* Enable GPIO clock. */
 	/* Manually: */
-	//RCC_AHBENR |= RCC_AHBENR_GPIOCEN;
+	//RCC_AHBENR |= RCC_AHBENR_GPIOAEN;
 	/* Using API functions: */
 	rcc_periph_clock_enable(RCC_GPIOA);
 
 
-	/* Set GPIO8 (in GPIO port C) to 'output push-pull'. */
+	/* Set GPIO7 (in GPIO port A) to 'output push-pull'. */
 	/* Using API functions: */
 	gpio_mode_setup(PORT_LED, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, PIN_LED);
 }
@@ -45,13 +45,13 @@ int main(void)
 
 	gpio_setup();
 
-	/* Blink the LED (PC8) on the board. */
+	/* Blink the LED (PA7) on the board. */
 	while (1) {
 		/* Manually: */
-		// GPIOC_BSRR = PIN_LED;		/* LED off */
+		// GPIOA_BSRR = PIN_LED;		/* LED off */
 		// for (i = 0; i < 1000000; i++)	/* Wait a bit. */
 		//	__asm__("nop");
-		// GPIOC_BRR = PIN_LED;			/* LED on */
+		// GPIOA_BRR = PIN_LED;			/* LED on */
 		// for (i = 0; i < 1000000; i++)	/* Wait a bit. */
 		//	__asm__("nop");
 
